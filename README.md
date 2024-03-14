@@ -26,7 +26,7 @@ sudo apt install git
 Then, clone the repository:
 
 ````
-git clone https://github.com/pradyumnasagar/miRPV.git
+git clone https://github.com/SequenceSensei/miRPV.git
 ````
 And navigate to the miRPV directory:
 
