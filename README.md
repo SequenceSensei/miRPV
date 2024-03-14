@@ -21,7 +21,7 @@ The installation has been tested on Ubuntu 18.04. If you wish to install it on a
 1) Clone this repository. If git is not installed, run: 
 
 ````
-sudo apt install git
+sudo apt install git lolcat
 ````
 Then, clone the repository:
 
