@@ -180,13 +180,21 @@ cd "$PREFIX"
 conda install -q -y -c conda-forge mamba
 #cat requirements.txt | xargs mamba install -q -y
 #mamba install -q -y -c auto lolcat
+echo 'installing figlet'
 mamba install -q -y -c tsnyder figlet
+echo 'installing pv'
 mamba install -q -y -c conda-forge pv 
+echo 'installing gcc'
 mamba install -q -y -c conda-forge gcc 
+echo 'installing make'
 mamba install -q -y -c anaconda make 
+echo 'installing gfortan'
 mamba install -q -y -c conda-forge gfortran
+echo 'installing sl'
 mamba install -q -y -c conda-forge sl 
+echo 'installing viennarna'
 mamba install -q -y -c bioconda viennarna
+#echo 'installing figlet'
 
 # checking for WGET
 set +e
