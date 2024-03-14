@@ -127,7 +127,7 @@ fi
 echo "This version of miRPV works best on Ubuntu System."
 systemID=$(grep "^ID=" /etc/os-release | awk -F "=" '{print $2}')
 if [[ "$systemID" == "ubuntu" ]]; then
-    echo "Using Ubuntu Operating System."
+    echo "You are Using Ubuntu Operating System."
 else
     echo "Warning: You are using $systemID. Some dependencies might not be installed correctly."
 fi
@@ -164,7 +164,8 @@ eval "$(${CONDA_DIR}/bin/conda 'shell.bash' 'hook')"
 # Create Conda environment if it doesn't exist
 if [ ! -d "${CONDA_DIR}/envs/${ENV}" ]; then
     echo "Creating Conda environment: $ENV"
-    conda create -n $ENV -y python=3.8
+    conda create -n $ENV -y python=3.8 -c conda-forge mamba
+
 fi
 
 # Activate the Conda environment
@@ -176,8 +177,9 @@ conda activate $ENV
 set -e
 
 cd "$PREFIX"
+conda install -q -y -c conda-forge mamba
 #cat requirements.txt | xargs mamba install -q -y
-mamba install -q -y -c auto lolcat
+#mamba install -q -y -c auto lolcat
 mamba install -q -y -c tsnyder figlet
 mamba install -q -y -c conda-forge pv 
 mamba install -q -y -c conda-forge gcc 
